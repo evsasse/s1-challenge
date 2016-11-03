@@ -1,16 +1,9 @@
-function clienteDoServico(){
-  let unorderedData = [
-    {id:1, titulo:"Java How To Program", autor:"Deitel & Deitel", edicao:2007},
-    {id:2, titulo:"Patterns of Enterprise Application Architecture", autor:"Martin Fowler", edicao:2002},
-    {id:3, titulo:"Head First Design Patterns", autor:"Elisabeth Freeman", edicao:2003},
-    {id:4, titulo:"Internet & World Wide Web: How to Program", autor:"Deitel & Deitel", edicao:2007}
-  ];
+let config = require("./config.js");
 
-  let orderedData = servicoDeOrdenacao(unorderedData.slice(),[
-    {field:"edicao",asc:false},
-    {field:"autor",asc:false},
-    {field:"titulo",asc:true}
-  ]);
+function clienteDoServico(){
+  let unorderedData = config.defaultData;
+
+  let orderedData = servicoDeOrdenacao(unorderedData.slice(),config.orders);
 
   console.log(orderedData);
 }
