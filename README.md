@@ -1,5 +1,5 @@
 # Como rodar
-Utilizando a versão v6.9.1 ou compatível, estando na pasta do projeto, rode:
+Utilizando a versão v6.9.1 do Node.js, ou compatível, e estando na pasta do projeto, rode:
 
     node main.js
 
